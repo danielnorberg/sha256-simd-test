@@ -16,8 +16,17 @@ func check(e error) {
 
 func main() {
 	shaWriter := sha256.New()
-	file, err := os.Open(os.Args[1])
-	check(err)
-	io.Copy(shaWriter, file)
-	fmt.Printf("%x", shaWriter.Sum(nil))
+
+	switch os.Args[1] {
+	case "simple":
+		file, err := os.Open(os.Args[2])
+		check(err)
+		io.Copy(shaWriter, file)
+		fmt.Printf("%x", shaWriter.Sum(nil))
+	case "server":
+		server := sha256.NewAvx512Server()
+		h512 := sha256.NewAvx512(server)
+		h512.Write(fileBlock)
+		fmt.Printf("%x", h512.Sum([]byte{}))
+	}
 }
