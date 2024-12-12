@@ -25,7 +25,8 @@ ff803171b009108a1a3da6978df30529442b3c5cc32350ccdb9138e9fde3727b
 
 ```
 time ./sha256-simd-test server-avx512 ~/data-8G
-e1a8a32281e3bbeaf178ce831b472b9dc0338da6d121f65990d89b4a09fb9ca0./sha256-simd-test server ~/data-8G  39.18s user 1.63s system 111% cpu 36.482 total
+e1a8a32281e3bbeaf178ce831b472b9dc0338da6d121f65990d89b4a09fb9ca0
+./sha256-simd-test server ~/data-8G  39.18s user 1.63s system 111% cpu 36.482 total
 ```
 
 ## sha256sum
