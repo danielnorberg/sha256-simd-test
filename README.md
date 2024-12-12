@@ -1,5 +1,10 @@
 # sha256-simd-test
 
+* Python hashlib is fast 🚀
+* OpenSSL is fast 🚀
+* `minio/sha256-simd` is fast 🚀
+* The `minio/sha256-simd` avx512 server does not offer faster single file performance
+
 ## Python 3.11 Hashlib
 ```
 python --version
