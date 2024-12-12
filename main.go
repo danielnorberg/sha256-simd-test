@@ -24,7 +24,7 @@ func main() {
 	case "simple":
 		io.Copy(shaWriter, file)
 		fmt.Printf("%x", shaWriter.Sum(nil))
-	case "server":
+	case "server-avx512":
 		server := sha256.NewAvx512Server()
 		h512 := sha256.NewAvx512(server)
 		buf := make([]byte, 2<<20)
