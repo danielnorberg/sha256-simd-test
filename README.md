@@ -2,8 +2,8 @@
 
 * Python hashlib is fast 🚀
 * OpenSSL is fast 🚀
-* `minio/sha256-simd` is fast 🚀
-* The `minio/sha256-simd` avx512 server does not offer faster single file performance
+* The `minio/sha256-simd` single file hasher is fast (uses intel sha extensions - not avx512) 🚀
+* The `minio/sha256-simd` avx512 server multi-file parallel hasher does not offer faster single file performance
 
 ## Python 3.11 Hashlib
 ```
