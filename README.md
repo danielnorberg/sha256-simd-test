@@ -1,5 +1,14 @@
 # sha256-simd-test
 
+## Python 3.11 Hashlib
+```
+python --version
+Python 3.11.11
+
+time python -c 'import hashlib; hashlib.file_digest(open("/home/dano/data-8G", "rb"), "sha256")'
+python -c   4.95s user 1.08s system 99% cpu 6.032 total
+```
+
 ## OpenSSL
 ```
 time openssl dgst -sha256 < ~/data-8G
